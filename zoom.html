@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="css/xzoom.css" media="all" /> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+
+		@media (min-width:1200px) {
+		    .container {
+		        max-width: 1440px;
+		        padding-top: 100px;
+		    }
+		}
+
+		.grid-container{
+			display: grid;
+			grid-template-columns: auto minmax(0,1fr);
+			column-gap: 20px;
+		}
+
+		.grid-container .xzoom-thumbs{
+		    grid-column-start: 1;
+		    grid-row-start: 1;
+		    display: flex;
+		    flex-direction: column;
+		}
+
+		.zoom-img{
+			width: 474px;
+		}
+
+		.zoom-img img{
+			width: 100%;
+		}
+
+		.row{
+			width: 100%;
+			max-width: 100%;
+			margin-right: 0px;
+    		margin-left: 0px;
+		}
+
+	</style>
+ 
+</head>
+<body>
+    <section id="default" class="container">
+	    <div class="row">
+	    	<div class="col-md-6">
+
+		      	<div class="large-5 column">
+			        <div class="xzoom-container grid-container">
+
+			        	<div class="zoom-img">
+			          		<img class="xzoom" id="xzoom-default" src="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg" xoriginal="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg" />
+			          	</div>
+
+			          	<div class="xzoom-thumbs">
+			            	<a href="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg">
+			            		<img class="xzoom-gallery" width="80" src="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg"  xpreview="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg" title="The title becomes the description!">
+			            	</a>
+
+			            	<a href="https://cdn.superme.al/s/shoply/enterprise/3/images/cat-eye2-637950224612895591.jpg">
+			            		<img class="xzoom-gallery" width="80" src="https://cdn.superme.al/s/shoply/enterprise/3/images/cat-eye2-637950224612895591.jpg" title="The title becomes the description!">
+			            	</a>
+
+			            	<a href="https://cdn.superme.al/s/shoply/enterprise/3/images/club-master.jpg">
+			            		<img class="xzoom-gallery" width="80" src="https://cdn.superme.al/s/shoply/enterprise/3/images/club-master.jpg" title="The title becomes the description!">
+			            	</a>
+			          	</div>
+
+			        </div>        
+		      	</div>
+
+		     	<div class="large-7 column"></div>
+
+		    </div> 	
+
+		    <div class="col-md-6">
+	     		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+		    </div>
+
+	    </div>
+    </section>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/xzoom.min.js"></script>
+
+    <script type="text/javascript">$(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});</script>
+</body>
+</html>
+

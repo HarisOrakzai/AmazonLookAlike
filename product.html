@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <title>Product</title>
+
+    <style type="text/css">
+    	*{
+				font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",
+				sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+			}
+
+			a{
+			  cursor: pointer;
+			  text-decoration: none;
+			}
+
+	    ::-webkit-scrollbar-track{
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				border-radius: 10px;
+				background-color: #ebebeb;
+			}
+
+			::-webkit-scrollbar{
+				width: 5px;
+			}
+
+			::-webkit-scrollbar-thumb{
+				border-radius: 5px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+				background-color: #6d6d6d;
+			}
+
+	    	@media (min-width: 1200px){
+				.container, .container-lg, .container-md, .container-sm, .container-xl {
+			    	max-width: 1440px;
+				}
+			}
+
+			.full-content{
+				margin-top: 100px;
+				margin-bottom: 200px;
+			}
+
+			.full-content{
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				align-items: flex-start;
+			}
+
+			.left-content{
+				position: sticky;
+				top: 0;
+				z-index: 5;
+			}
+
+			.left-dtl{
+				overflow-y: scroll;
+				height: 600px;
+				width: 250px;
+			}
+
+			.left-dtl h6{
+				margin-top: 20px;
+			}
+
+			.right-content{
+				width: 100%;
+				margin-left: 20px;
+			}
+
+			.right-txt{
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.right-txt-btn{
+				display: flex;
+				flex-direction: row;
+				align-content: center;
+	    	justify-content: center;
+	    	align-items: center;
+			}
+
+			.right-txt-btn .btn-1{
+				display: flex;
+				padding: 2px 15px;
+				border: 1px solid #d2d2d2;
+				background-color: white;
+				font-size: 12px;
+			}
+
+			.right-txt-btn .btn-1:hover{
+				border: 1px solid black;
+				background-color: black;
+				color: white;
+			}
+
+			.grid-tile{
+				display: flex;
+				margin-left: 20px;
+			}
+
+			.grid-container .item-detail{
+				display: none;
+			}
+
+			.make-it-left{
+				margin-right: 30px;
+			}
+
+			.grid-container .row{
+				margin-top: 20px;
+			}
+
+			.list-view .row{
+				margin-top: 0px;
+			}
+
+			.list-view .row > [class*=col-]{
+				margin-top: 20px;
+			  max-width: 100%;
+			  flex: 0 0 100%;
+			}
+
+			.list-view .item-detail{
+			  display: flex;
+			}
+
+			.list-view .item-detail p{
+			  color: #777777;
+			  font-size: 14px;
+			  margin-right: 25px;
+			}
+
+			.list-view .img-dtl{
+			  flex-direction: row;
+			  width: 100%;
+			}
+
+			@media (max-width: 575.98px){
+			  .list-view .img-dtl {
+			    flex-direction: column;
+			  }
+			}
+
+			.list-view .img-dtl .img-only{
+			  width: 180px !important;
+			  height: 180px !important;
+			}
+
+			.list-view .img-dtl .dtl-only{
+			  display: flex;
+			  flex-direction: row;
+			  margin-left: 30px;
+			  flex: 1;
+			}
+
+			.list-view .two-btns .btn-2{
+				margin-left: 10px;
+			}
+
+			.img-dtl{
+				display: flex;
+				flex-direction: column;
+				width: 257px;
+			}
+
+			.img-dtl:hover .img-only{
+				border: 1px solid #333;
+			}
+
+			.img-only{
+				height: 257px !important;
+				width: 257px !important;
+				border: 1px solid #d2d2d2;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
+			}
+
+			.img-only img{
+				width: 100% !important;
+				margin: auto;
+			}
+
+			.dtl-only{
+				display: flex;
+			  flex-direction: column;
+			}
+
+			.dtl-only h3{
+				font-size: 16px;
+				color: #000;
+				margin-bottom: 0px;
+				font-weight: 500;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+			  -webkit-box-orient: vertical;
+			  overflow: hidden;
+			  word-break: break-all;
+			}
+
+			.review-sold{
+			  display: flex;
+			  flex-direction: row;
+			  align-content: center;
+			  align-items: center;
+			  margin: 5px 0px;
+			}
+
+			.rating-list li i.yellow{
+			  color: #FFD700;
+			}
+
+			.rating-list li i.gray{
+			  color: #bbb;
+			}
+
+			.list-inline>li{
+			  display: inline-block;
+			  padding-right: 5px;
+			  padding-left: 5px;
+			}
+
+			.rating-list{
+				margin: 0px;
+				display: inline;
+				cursor: pointer;
+			}
+
+			.rating-list li{
+			  padding: 0px;
+			}
+
+			.fa-star{
+				font-size: 12px;
+			}
+
+			.span-txt-1{
+				font-size: 12px;
+				margin-left: 5px;
+			}
+
+			.span-txt-2{
+				font-size: 12px;
+				margin-left: auto;
+			}
+
+			.price{
+				display: flex;
+				margin-bottom: 5px;
+				font-weight: 500;
+			}
+
+			.price .span-txt{
+				font-size: 20px;
+			}
+
+			.price .flt{
+				position: relative;
+				top: 5px;
+				font-size: 12px;
+				font-weight: 500;
+			}
+
+			.stock p{
+				font-size: 12px;
+				color: #777777;
+				height: 30px;
+			}
+
+			.stock .p{
+				background-color: #d4edda; 
+				border-color: #d4edda; 
+				padding: 5px 10px; 
+				font-size: 12px;
+				margin-right: 190px;
+				font-weight: 500;
+			}
+
+			.two-btns .btn-1{
+				display: flex;
+				padding: 9px 17px;
+				border: 1px solid black;
+				background-color: white;
+				border-radius: 3px;
+			}
+
+			.two-btns .btn-1:hover{
+				border: 1px solid black;
+				background-color: black;
+				color: white;
+			}
+
+			.two-btns .btn-2{
+				display: flex;
+				justify-content: center;
+				padding: 5px 20px;
+				width: 200px;
+				border: 1px solid black;
+				background-color: white;
+				border-radius: 3px;
+				font-size: 14px;
+			}
+
+			.two-btns .btn-2:hover{
+				border: 1px solid black;
+				background-color: #f2f2f2;
+			}
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+    	<div class="row">
+    		<div class="full-content">
+    			
+    			<div class="left-content">
+    				<h5>Filter & Refine</h5>
+
+    				<div class="left-dtl">
+  				  	<h6>Brand</h6>
+  				  	<input type="checkbox">
+					  	<label>Apex (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Aviator (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Beside (2)</label><br>
+					  	<input type="checkbox">
+					  	<label>Blue Block Square (1)</label><br>
+					  	<input type="checkbox">
+					  	<label>Club Master (5)</label><br>
+					  	<input type="checkbox">
+					  	<label>EliteBook (2)</label><br>
+
+					  	<h6>Manufacturer</h6>
+  				  	<input type="checkbox">
+					  	<label>Apex (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Aviator (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Beside (2)</label><br>
+					  	<input type="checkbox">
+					  	<label>Blue Block Square (1)</label><br>
+					  	<input type="checkbox">
+					  	<label>Club Master (5)</label><br>
+					  	<input type="checkbox">
+					  	<label>EliteBook (2)</label><br>
+
+					  	<h6>Backlit keyboard</h6>
+  						<input type="checkbox">
+					  	<label>Apex (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Aviator (3)</label><br>
+					  	<input type="checkbox">
+					  	<label>Beside (2)</label><br>
+					  	<input type="checkbox">
+					  	<label>Blue Block Square (1)</label><br>
+					  	<input type="checkbox">
+					  	<label>Club Master (5)</label><br>
+					  	<input type="checkbox">
+					  	<label>EliteBook (2)</label><br>
+
+					  	<h6>Camera</h6>
+	    				<input type="checkbox">
+	  					<label>Apex (3)</label><br>
+	  					<input type="checkbox">
+	  					<label>Aviator (3)</label><br>
+	  					<input type="checkbox">
+	  					<label>Beside (2)</label><br>
+	  					<input type="checkbox">
+	  					<label>Blue Block Square (1)</label><br>
+	  					<input type="checkbox">
+	  					<label>Club Master (5)</label><br>
+	  					<input type="checkbox">
+	  					<label>EliteBook (2)</label><br>
+	  				</div>
+    			</div>
+
+    			<div class="right-content">
+
+    				<div class="container">
+	    				<div class="right-txt">
+	    					<div class="right-txt-p">
+	    						<p>30 products found with 147 buying options</p>
+	    					</div>
+
+	    					<div class="right-txt-btn">
+	    						<button class="btn-1">Best Match</button>
+	    						<button class="btn-1">Best Seller</button>
+	    						<button class="btn-1">Best Rated</button>
+	    						<button class="btn-1">Price</button>
+
+	    						<div class="grid-tile">
+									  <button class="btn-1 btn-grid">Grid View</button>
+									  <button class="btn-1 btn-list">List View</button>
+									</div>
+	    					</div>
+	    				</div>
+	    			</div>
+
+    				<div class="container grid-container">
+						  <div class="row">
+
+						  	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Club Master/140mm/Gold/Club Master</h3></a>
+			                  
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">Not reviewed yet.</span>
+			                    <span class="span-txt-2">41 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">20</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p>Only 24 left in stock (more on the way).</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">5 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/Screenshot-18.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>ROUND METAL OPTICS/Medium/Gold/Round</h3></a>
+			                  
+			                  <div class="review-sold">
+
+						              <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">1 review</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">13</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">15 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/1-3-300x190.png">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Oven And Microwaves/White/DW-MD-13/23 Ltr</h3></a>
+
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">1 review</span>
+			                    <span class="span-txt-2">628 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">1,000</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">19 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/12636472-0-M.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Samsung/6.5 inches/Black/8/256GB</h3></a>
+
+				                  <div class="review-sold">
+
+				                    <ul class="list-inline rating-list">
+				                      <li><i class="fas fa-star yellow"></i></li>
+				                      <li><i class="fas fa-star yellow"></i></li>
+				                      <li><i class="fas fa-star yellow"></i></li>
+				                      <li><i class="fas fa-star yellow"></i></li>
+				                      <li><i class="fas fa-star gray"></i></li>
+				                    </ul>
+
+				                    <span class="span-txt-1">1 review</span>
+				                    <span class="span-txt-2">1 sold</span>
+
+			                  	</div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">17,299</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">24 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							</div>
+
+							<div class="row">
+
+						  	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/dell-inspiron-i7.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Dell Latitude/15.5/Silver/8GB/500GB</h3></a>
+
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">1 review</span>
+			                    <span class="span-txt-2">1 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">450</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">6 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/Fiodio-104-5.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Dell Latitude/15.5/Silver/8GB/500GB</h3></a>
+
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">1 review</span>
+			                    <span class="span-txt-2">1 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">450</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">6 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/space-4.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Dell Latitude/15.5/Silver/8GB/500GB</h3></a>
+
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                      <li><i class="fas fa-star yellow"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">1 review</span>
+			                    <span class="span-txt-2">1 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">450</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p class="p">In stock</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">6 buying options</button>
+			                  </div>
+			                </div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						  		<div class="img-dtl item">
+
+		                <a href="#" class="img-only">
+		                  <img src="https://cdn.superme.al/s/shoply/enterprise/3/images/4.jpg">
+		                </a>
+
+		                <div class="dtl-only">
+
+		                	<div class="make-it-left">
+			                  <a href="#"><h3>Club Master/140mm/Gold/Club Master</h3></a>
+			                  
+			                  <div class="review-sold">
+
+			                    <ul class="list-inline rating-list">
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                      <li><i class="fas fa-star gray"></i></li>
+			                    </ul>
+
+			                    <span class="span-txt-1">Not reviewed yet.</span>
+			                    <span class="span-txt-2">41 sold</span>
+
+			                  </div>
+
+			                  <div class="item-detail">
+			                  	<p>DW-MD-12- Microwave Oven - 700V -fd WhiteCook With Care, Well done Not RareGetting tired of hours of cooking for your family, or guests worry no more. Get this Cooking Series Microwave Oven MD12 - 20 Ltr - white and make yourself tension free from cooking. For desires or late-night nibbling, this MD-10 is the microwave to satisfy your cravings or simple to-make snacks. From blend vegetable soup, hot espresso, cream caramel to brownies, spread popcorn or tea, this is the ideal match for the</p>
+			                	</div>
+			                </div>
+
+		                	<div class="make-it-right">
+			                  <div class="price">
+			                    <span class="flt">$</span>
+			                    <span class="span-txt">20</span>
+			                    <span class="flt">.00</span>
+			                  </div>
+
+			                  <div class="stock">
+			                    <p>Only 24 left in stock (more on the way).</p>
+			                  </div>
+
+			                  <div class="two-btns d-flex justify-content-between">
+			                    <button class="btn-1"><i class="fas fa-shopping-cart" aria-hidden="true" style="font-size: 15px"></i></button>
+			                    <button class="btn-2">5 buying options</button>
+			                  </div>
+											</div>
+
+		                </div>
+
+		              </div>
+						  	</div>
+
+							</div>
+
+						</div>
+
+    			</div>
+
+    		</div>
+    	</div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script type="text/javascript">
+			function showList(e) {
+			  var $gridCont = $('.grid-container');
+			  e.preventDefault();
+			  $gridCont.hasClass('list-view') ? $gridCont.removeClass('list-view') : $gridCont.addClass('list-view');
+			}
+
+			function gridList(e) {
+			  var $gridCont = $('.grid-container')
+			  e.preventDefault();
+			  $gridCont.removeClass('list-view');
+			}
+
+			$(document).on('click', '.btn-grid', gridList);
+			$(document).on('click', '.btn-list', showList);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,490 @@
+*{
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",
+							 sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	display: inline-block;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #ebebeb;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #6d6d6d;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container{
+	min-height: inherit;
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1440px;
+        padding: 0px;
+    }
+}
+
+@media (max-width:996px) {
+    .container {
+        max-width: 100%;
+        padding: 0px;
+    }
+}
+
+.carousel-item {
+  padding: 15vw 0;
+  background-size:cover; 
+  background-position:center;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+  background: white;
+  border: 1px solid #ea302b;
+  width: 14px;
+  height: 14px;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+
+.owl-carousel button.owl-dot.active span{
+  background: #ea302b !important;
+  border: 1px solid #ea302b !important;
+}
+
+.owl-dots{
+	position: absolute;
+  bottom: 26px;
+  left: 0;
+  right: 40px !important;
+  text-align: right !important;
+}
+
+.bck-img{
+	background-image: url(https://www.casio.com/content/casio/locales/intl/en/products/watches/products/type/connect/_jcr_content/root/responsivegrid/container_copy/image.casiocoreimg.jpeg/1655282046009/hero-pc-m.jpeg);
+	height: 600px
+}
+
+.bck-img2{
+	background-image: url(https://cdn.shopify.com/s/files/1/0231/3627/2464/files/monitor34-03.jpg?v=1602481331);
+	height: 600px
+}
+
+.header-nav{
+	position: sticky;
+	top: 0px;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 2px rgb(108 119 120 / 20%);
+  padding: 8px 15px;
+}
+
+.shop-head button{
+	background-color: white;
+}
+
+.angle-left{
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	padding: 2px 10px;
+}
+
+.angle-left i{
+	color: #d2d2d2;
+}
+
+.items-div ul{
+	display: flex;
+	flex-direction: row;
+}
+
+#sale-item{
+	display: flex;
+  align-items: center;
+  margin: 0 30px 0 15px;
+  transform: skew(-20deg);
+  background: #ed0000;
+  margin-left: 30px;
+}
+
+#sale-item a{
+	color: #ffffff;
+	padding: 12px 15px;
+	font-size: 16px;
+	transform: skew(20deg);
+}
+
+.crt button{
+	background-color: white;
+	border: none;
+}
+
+.input-form{
+	float: left;
+  position: relative;
+  margin: 0 0 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 500px;
+  line-height: 30px;
+  margin-top: 0;
+}
+
+.input-form input{
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #000;
+  background: #fff;
+  padding: 5px 35px 5px 40px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.input-form input::placeholder {
+  font-size: 15px;
+}
+
+.input-form input:focus{
+  border-color: #66afe9 !important;
+  outline: 0 !important;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+}
+
+.input-form i{
+	position: absolute;
+	top: 11px;
+	left: 16px;
+	z-index: 1000;
+	font-size: 15px;
+}
+
+.search-wrap{
+	display: none;
+  position: absolute;
+  padding: 20px 15px;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  max-height: 500px;
+  overflow-y: scroll;
+  z-index: 1111;
+  margin: 0 2%;
+  min-height: 200px;
+  top: 45px;
+  width: 600px;
+  left: auto;
+  box-shadow: 0 2px 5px #aaa;
+  right: -8px;
+}
+
+.eocjs-newsticker .eocjs-newsticker-one, 
+.eocjs-newsticker .eocjs-newsticker-two{
+	font-size: 14px;
+	color: #343A40;
+}
+
+.img-box{
+	border: 1px solid #d2d2d2d2;
+	height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.img-box img{
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.sch-text{
+	flex: 1;
+}
+
+.sch-text h3{
+	color: black;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.sch-text p{
+	color: #777777;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.all-img{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.img-dtl{
+	display: flex;
+	flex-direction: column;
+	width: 257px;
+	flex: 1;
+  position: relative;
+}
+
+.img-dtl:hover .img-only{
+	border: 1px solid #333;
+}
+
+.img-only{
+	height: 257px !important;
+	width: 257px !important;
+	border: 1px solid #d2d2d2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.img-only img{
+	width: 100% !important;
+	margin: auto;
+}
+
+.dtl-only{
+	display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dtl-only h3{
+	font-size: 16px;
+	color: #000;
+	margin-bottom: 0px;
+	font-weight: 500;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.review-sold{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.rating-list li i.yellow{
+  color: #FFD700;
+}
+
+.rating-list li i.gray{
+  color: #bbb;
+}
+
+.list-inline>li{
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.rating-list{
+	margin: 0px;
+	display: inline;
+	cursor: pointer;
+}
+
+.rating-list li{
+  padding: 0px;
+}
+
+/*.fa{
+  display: inline-block;
+  font: normal normal normal 12px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  cursor: pointer;
+}*/
+
+.fa-star{
+	font-size: 12px;
+}
+
+.span-txt-1{
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+.span-txt-2{
+	font-size: 12px;
+	margin-left: auto;
+}
+
+.price{
+	display: flex;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+.price .span-txt{
+	font-size: 20px;
+}
+
+.price .flt{
+	position: relative;
+	top: 5px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.stock p{
+	font-size: 12px;
+	color: #777777;
+	height: 30px;
+}
+
+.stock .p{
+	background-color: #d4edda; 
+	border-color: #d4edda; 
+	padding: 5px 10px; 
+	font-size: 12px;
+	margin-right: 190px;
+	font-weight: 500;
+}
+
+.two-btns{
+	margin-top: auto;
+	flex: 1;
+}
+
+.two-btns .btn-1{
+	display: flex;
+	padding: 9px 17px;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.two-btns .btn-1:hover{
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+.two-btns .btn-2{
+	display: flex;
+	justify-content: center;
+	padding: 5px 20px;
+	width: 200px;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.two-btns .btn-2:hover{
+	border: 1px solid black;
+	background-color: #f2f2f2;
+}
+
+.carousel-wrapper{
+  margin: auto;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.owl-carousel .owl-nav{
+  overflow: hidden;
+  height: 0px;
+}
+
+.owl-carousel .item{
+}
+
+.owl-carousel .nav-button{
+  height: 50px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 95px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.owl-carousel .owl-prev{
+  left: 0px;
+  border: 1px solid #333;
+  border-left: none;
+  border-radius: 0px 3px 3px 0px !important;
+}
+
+.owl-carousel .owl-next{
+  right: 0px;
+  border: 1px solid #333;
+  border-right: none;
+  border-radius: 3px 0px 0px 3px !important;
+}
+
+.owl-theme .owl-nav [class*=owl-]{
+  color: #333;
+  font-size: 36px;
+  background-color: white;
+  transition: all 300ms linear;
+  height: 60px !important;
+  width: 30px !important;
+  padding: 0px;
+  margin: 0px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+  color: white;
+  background-color: black;
+  transition: all 300ms linear;
+}
+
+.owl-carousel .prev-carousel:hover{
+  background-position: 0px -53px;
+}
+
+.owl-carousel .next-carousel:hover{
+  background-position: -24px -53px;
+}
+
+.owl-carousel .owl-prev.disabled .owl-prev,
+.owl-carousel .owl-next.disabled .owl-next{
+	border: none;
+}
